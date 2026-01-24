@@ -15,7 +15,14 @@
 - 日本語と英数字の間には半角スペースを入れる。
 
 ## プロジェクト概要
-- 目的: Parses the log file by PaperMC (same for Spigot, Bukkit).
+PaperMC（Spigot/Bukkit 互換）のログファイルをパースして分析するツール。
+
+### 技術スタック
+- **言語**: Python
+- **フレームワーク**: None (CLI tool)
+- **パッケージマネージャー**: pip（推定）
+- **主要な依存関係**:
+  - Unknown（詳細は config.json のみ）
 
 ## コーディング規約
 - フォーマット: 既存設定（ESLint / Prettier / formatter）に従う。
@@ -23,9 +30,8 @@
 - コメント言語: 日本語
 - エラーメッセージ: 英語
 
-## 開発コマンド
+### 開発コマンド
 ```bash
-# README を確認してください
 ```
 
 ## 注意事項
@@ -34,3 +40,5 @@
 - 既存のプロジェクトルールがある場合はそれを優先する。
 
 ## リポジトリ固有
+- PaperMC ログ解析
+- Minecraft サーバーログ処理
