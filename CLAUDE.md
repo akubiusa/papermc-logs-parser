@@ -9,7 +9,7 @@ messages) merged into the entry they belong to.
 
 ## Runtime and dependencies
 
-- Pure Python 3, **standard library only** (`os`, `json`, `re`). There is no
+- Pure Python 3, **standard library only** (`os`, `json`, `re`, `sys`). There is no
   package manifest (`requirements.txt` / `pyproject.toml`) and no third-party
   dependency. Do not introduce one without a clear need.
 
@@ -44,6 +44,7 @@ messages) merged into the entry they belong to.
 
 - There are no automated tests. Verify changes manually by running `python -m src`
   against a sample PaperMC log and inspecting `output.json`.
+- CI (`.github/workflows/python-ci.yml`) runs `ruff check`, `ruff format --check` and `pytest`; `pytest` currently collects no tests because none exist yet.
 
 ## Documentation update rules
 
