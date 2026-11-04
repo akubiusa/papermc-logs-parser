@@ -5,7 +5,7 @@ tool that parses PaperMC/Spigot/Bukkit server logs into structured JSON.
 
 ## Project facts
 
-- Pure Python 3, standard library only (`os`, `json`, `re`). There is no
+- Pure Python 3, standard library only (`os`, `json`, `re`, `sys`). There is no
   dependency manifest and no test suite.
 - Entry point: `python -m src` (`src/__main__.py` -> `src/__init__.py:parser`).
 

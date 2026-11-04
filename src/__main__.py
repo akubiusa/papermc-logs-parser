@@ -1,5 +1,6 @@
-import os
 import json
+import os
+import sys
 
 from src import parser
 
@@ -7,15 +8,12 @@ from src import parser
 def main():
     if not os.path.exists("./config.json"):
         print("[ERROR] config.json not found.")
-        exit(1)
+        sys.exit(1)
 
     with open("./config.json", "r") as f:
         config = json.load(f)
 
-    data = {
-        "count": 0,
-        "firstTime": None
-    }
+    data = {"count": 0, "firstTime": None}
     if os.path.exists("./data.json"):
         with open("./data.json", "r") as f:
             data = json.load(f)
@@ -29,15 +27,12 @@ def main():
     firstTime = logs[0]["time"]
 
     if firstTime == data["firstTime"]:
-        logs = logs[data["count"]:]
+        logs = logs[data["count"] :]
 
     print(logs)
 
     with open("./data.json", "w") as f:
-        json.dump({
-            "count": dataCount,
-            "firstTime": firstTime
-        }, f)
+        json.dump({"count": dataCount, "firstTime": firstTime}, f)
 
 
 if __name__ == "__main__":
