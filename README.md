@@ -31,7 +31,7 @@ The tool echoes every line of the log file to stdout while parsing, then prints 
 Both files are written to the current working directory.
 
 - `output.json`: all parsed entries as a JSON array.
-- `data.json`: `{"count": <entries parsed>, "firstTime": "<time of the first entry>"}`. On the next run, if the first entry has the same time as `firstTime`, only the entries after the first `count` ones are printed. `output.json` always contains every entry.
+- `data.json`: the entry count, first entry time, source identity, file size, and a digest of the file content. On the next run, only entries after the saved count are printed if the source and previously read content still match. Otherwise, all entries are printed. Older cursor files are reset on the next run. `output.json` always contains every entry.
 
 ### Entry format
 
